@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class LearningController extends AbstractController
 {
     /**
-     * @Route("/learning", name="learning")
+     * @Route("/", name="home")
      */
     public function index(): Response
     {
@@ -17,4 +17,18 @@ class LearningController extends AbstractController
             'controller_name' => 'LearningController',
         ]);
     }
+
+
+    /**
+     * @Route("/layer", name="lay")
+     */
+    public function learning(): Response
+    {
+        return $this->render('learning/index.html.twig', [
+            'controller_name' => 'LearningController',
+        ]);
+    }
+
+
 }
+
